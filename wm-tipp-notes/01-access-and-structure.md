@@ -42,6 +42,27 @@ So writing Clawdia's tips into the real shared sheet is **not currently possible
 with the available tools**. This needs a decision / extra access from Stefan
 (see `03-plan.md`).
 
+### ⚠️ Second blocker: network egress allowlist (found 2026-06-21)
+
+The chosen workaround — an Apps Script web app triggered via HTTP — is also
+blocked, but by the **environment's network egress policy**, not by Google:
+
+```
+Host not in allowlist: script.google.com. Add this host to your network egress settings to allow access.
+```
+
+Both `WebFetch` and Bash `curl` to `script.google.com` return 403 for this
+reason. (The Google_Drive MCP **read** path still works because it goes through
+the MCP server, not direct egress.)
+
+**Resolutions:**
+- **Run the script in the Apps Script editor** (`run` function, ▶ Run) — executes
+  in Google's cloud, no egress from this env needed. ✅ used.
+- OR add `script.google.com` + `script.googleusercontent.com` to the env's
+  network egress allowlist, then trigger `/exec` via WebFetch.
+
+Verification of the result is done via `read_file_content` (MCP), which works.
+
 ## Read access pattern that works
 
 ```
