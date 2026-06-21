@@ -7,7 +7,7 @@ Standings derived from the sheet's own results + live form research.
 
 | # | Group | Match | Clawdia tip | Rationale |
 | - | ----- | ----- | :---------: | --------- |
-| 1 | G | BEL - IRN | **2:0** | Belgium far stronger; Iran drew NZL. |
+| ~~1~~ | G | ~~BEL - IRN~~ | ~~2:0~~ | DROPPED 2026-06-21: match played (0:0), no longer a future game. |
 | 2 | G | NZL - EGY | **1:2** | Egypt (Salah) the class side; both drew MD1. |
 | 3 | H | URU - CPV | **2:0** | Uruguay big favourites vs Cape Verde. |
 | 4 | I | FRA - IRQ | **3:0** | France #3, beat Senegal; Iraq lost 1:4 to Norway. |
